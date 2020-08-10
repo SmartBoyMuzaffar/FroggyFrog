@@ -22,7 +22,7 @@ bot.worker_pool = util.ThreadPool(num_threads=50)
 
 @bot.message_handler(commands=['start', 'Start'])
 def start(commands):
-	bot.send_message(id_chat, '😳 Hy! froggy frog! 🐰 ' +   
+	bot.send_message(id_chat, '😳 Hy! froggy frog! 🐸 ' +   
 		'\n\nlets have fun  , if you want a command write /help' +
 		'\n\nCoded by Yezz123() | The quieter you become, the more you are able to hear')
 
