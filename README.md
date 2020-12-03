@@ -1,7 +1,7 @@
 <p align="center">
   <img width="480" height="480" src="https://media.giphy.com/media/dCco2kYIus7SZ6uuih/giphy.gif">
 </p>
-<p align="center"><img src="https://img.shields.io/badge/Version-1.0-brightgreen"></p>
+<p align="center"><img src="https://img.shields.io/badge/Version-2.0-brightgreen"></p>
 
 </p> 
 <p align="center"><img src="https://img.shields.io/badge/Author-Yezz123-green.svg"> 
