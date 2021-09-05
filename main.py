@@ -11,8 +11,8 @@ from subprocess import Popen
 
 #Token & ID Chat
 
-token = ''
-id_chat = ''
+token = '1828119482:AAHiemu9O1VGstZUlyTG74cMr4v1TQELMmQ'
+id_chat = '-1001443013481'
 
 bot = telebot.TeleBot(token, threaded=True)
 bot.worker_pool = util.ThreadPool(num_threads=50)
